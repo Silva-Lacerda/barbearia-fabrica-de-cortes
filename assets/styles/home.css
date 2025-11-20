@@ -81,12 +81,19 @@
 @media screen and (max-width: 1090px) {
 
     #info {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 21px;
-        margin-top: -20%;
+        width: 47vh;
+        margin: 0px;
+        margin-top: -40%;
+    }
+
+    #info .title {
+        font-size: 16px;
+
+    }
+
+    #info .description {
+        text-align: center;
+        font-size: 10px;
     }
 
     #inc {
@@ -98,9 +105,8 @@
     }
 
     #navalha_icon {
-    width: 15%;
-}
-
+        width: 15%;
+    }
 
 }
 
