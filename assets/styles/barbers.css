@@ -1,0 +1,102 @@
+#barbers_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../img/background-barber.jpg');
+   
+}
+
+
+#barbers_menu .title {
+    font-size: 4em;
+    font-weight: bolder;
+    margin-top: 140px;
+}
+
+#barbers_menu .subtitle {
+    font-size: 2em;
+    color: var(--color-primary-3);
+
+}
+
+#barbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: -80px;
+}
+
+#barbers .title {
+ font-size: 2em;
+}
+
+.barber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.barber img {
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.281);
+}
+
+
+#slide_content {
+    height: 100%;
+    width: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.swiper {
+    height: 500px;
+    display: flex;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    margin: 0 120px 0 120px;
+    color: var(--color-primary-3);
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+@media screen and (max-width: 1170px) {
+    #barbers_menu .subtitle {
+        text-align: center;
+    }
+
+    #barbers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .barber img {
+        width: 300px;
+        border-radius: 5px;
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.281);
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+}
+

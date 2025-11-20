@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Registro</title>
+    <link rel="stylesheet" href="assets/styles-cad/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- FORM LOGIN -->
+        <div class="form-box login">
+            <form action="#">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Senha" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <!--
+                <div class="forgot-link">
+                    <a href="#">Esqueci a senha</a>
+                </div>
+                -->
+                <button type="submit" class="btn">Login</button>
+                <!--
+                <p>Logar com minhas plataformas</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                -->
+            </form>
+        </div>
+
+        <!-- FORM REGISTER -->
+        <div class="form-box register">
+            <form action="#">
+                <h1>Cadastro</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Nome de usuário" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Senha" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+                <!--
+                <p>Cadastrar com minhas plataformas</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                -->
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <!-- TOGGLE BOX -->
+        <div class="toggle-box">
+            <!-- TOGGLE BOX LEFT -->
+            <div class="toggle-panel toggle-left">
+                <h1>Olá, Bem vindo!</h1>
+                <p>Não tenho uma conta</p>
+                <button class="btn register-btn">Registrar</button>
+                <a href="index.html">
+                    <button class="btn register-btn">Voltar</button>
+                </a>
+            </div>
+
+
+            <!-- TOGGLE BOX RIGHT -->
+            <div class="toggle-panel toggle-right">
+                <h1>Bem vindo de volta!</h1>
+                <p>Já tenho uma conta</p>
+                <button class="btn login-btn">Login</button>
+                <a href="index.html">
+                    <button class="btn register-btn">Voltar</button>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- TOGGLE BOX RIGHT -->
+        <div class="toggle-box"></div>
+
+    </div>
+</body>
+<script src="assets/script/script-cad.js"></script>
+</html>

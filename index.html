@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrica dos cortes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Slider-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+           <img src="assets/img/logo_fabrica.png" alt="Logo Fabrica De Cortes" id="logo">
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services_menu">SERVIÇOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#barbers_menu">BARBEIROS</a>
+            </ul>
+            
+            <div id="buttons">
+                <a href="#barbers_menu">
+                    <button class=" nav-item btn-default">
+                        AGENDAR
+                    </button>
+                </a>
+
+                <!--
+                <a href="cad.html">
+                <button class="btn-default">
+                    LOGIN
+                </button>
+                </a>
+                -->
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars" style="color: #d9b68b;"></i>
+            </button>
+        </nav>
+
+        <!--Mobile-->
+        <div id="mobile">
+            <ul id="mobile_nav_list">
+                 <li class="nav-item">
+                    <a href="#">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services_menu">SERVIÇOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#barbers_menu">BARBEIROS</a>
+            </ul>
+
+            <!--Botão mobile-->
+            <!--
+            <a href="cad.html">
+                <button class="btn-default">
+                    LOGIN
+                </button>
+            </a>
+            -->
+            <button class="btn-default">
+                AGENDAR HORÁRIO
+            </button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="inc">
+                
+                <h2 class="sub-title">
+                    FÁBRICA DOS CORTES
+                </h2>
+                <h1 class="title">
+                    UM CORTE ELABORADO<br>
+                    E MUITO BEM FEITO <br>
+                    <span>PODE MUDAR O JOGO</span>
+                </h1>
+                <div id="navalha">
+                    <img src="assets/img/navalha.png" alt="Navalha" id="navalha_icon">
+                </div>
+            
+                
+            </div>
+            <div id="info">
+                <div class="box">
+                    <h1 class="title">
+                        ENDEREÇO
+                    </h1>
+                    <p class="description">
+                        AV. PAULO BROSSARD, 123
+                    </p>
+                </div>
+
+                <div class="shape"></div>
+
+                <div class="box">
+                    <h1 class="title">
+                        HORÁRIO
+                    </h1>
+                    <p class="description">
+                       TERÇA A DOMINGO: 10:00 ÁS 20:00
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services_menu">
+            <h2 class="title">SERVIÇOS</h2>
+            <h3 class="subtitle">SERVIÇOS QUE PRESTAMOS COM PROFISSIONALISMO</h3>
+            <div id="services">
+                <div class="service">
+                    <img src="assets/img/barba.png"  class="service-icon" alt="Icone barba">
+                    
+                    <div class="title-hover">
+                        <h3 class="service-title">
+                            BARBA E BIGODE
+                        </h3>
+                        <span class="service-description">
+                            DESING IDEAL PARA O CONJUNTO DE ACORDO COM SEU GOSTO
+                        </span>
+                    </div>
+                </div>
+            
+
+            
+                <div class="service">
+                    <img src="assets/img/maquina.png"  class="service-icon" alt="Icone barba">
+
+                    <div class="title-hover">
+                        <h3 class="service-title">
+                            PENTEADOS
+                        </h3>
+                        <span class="service-description">
+                            DIVERSOS MODELOS DE PENTEADOS PARA DIVERSAS OCASIÕES
+                        </span>
+                    </div>
+                </div>
+            
+
+            
+                <div class="service">
+                    <img src="assets/img/tesoura.png"  class="service-icon" alt="Icone barba">
+                    
+                    <div class="title-hover">
+                        <h3 class="service-title">
+                            CORTE GILETE
+                        </h3>
+                        <span class="service-description">
+                            UM CORTE MAIS PRECISO E SOFISTICADO
+                        </span>
+                    </div>
+                </div>
+            
+
+            
+                <div class="service">
+                    <img src="assets/img/navalha.png"  class="service-icon" alt="Icone barba">
+
+                    
+                    <div class="title-hover">
+                        <h3 class="service-title">
+                            QUIMICOS
+                        </h3>
+                        <span class="service-description">
+                            FAZEMOS QUALQUIER TIPO DE PROCEDIMENTO COM TÉCNICAS PROFISSIONAIS
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--
+        <section id="testimonials">
+           <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <div class="feedback-top">
+                            <img src="assets/img/avatar.png" class="feedback-avatar" alt="">
+                            <p>
+                                FULANO DE TAL
+                            </p>
+                                <img src="assets/img/icon-google.svg" class="google-icon" alt="">
+                        </div>
+                        <div class="feedback-bottom">
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sequi at voluptatum, obcaecati assumenda nemo sit, accusantium iste eveniet enim
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div class="feedback-top">
+                            <img src="assets/img/avatar.png" class="feedback-avatar" alt="">
+                            <p>
+                                FULANO DE TAL
+                            </p>
+                                <img src="assets/img/icon-google.svg" class="google-icon" alt="">
+                        </div>
+                        <div class="feedback-bottom">
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sequi at voluptatum, obcaecati assumenda nemo sit, accusantium iste eveniet enim
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div class="feedback-top">
+                            <img src="assets/img/avatar.png" class="feedback-avatar" alt="">
+                            <p>
+                                FULANO DE TAL
+                            </p>
+                                <img src="assets/img/icon-google.svg" class="google-icon" alt="">
+                        </div>
+                        <div class="feedback-bottom">
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sequi at voluptatum, obcaecati assumenda nemo sit, accusantium iste eveniet enim
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div class="feedback-top">
+                            <img src="assets/img/avatar.png" class="feedback-avatar" alt="">
+                            <p>
+                                FULANO DE TAL
+                            </p>
+                                <img src="assets/img/icon-google.svg" class="google-icon" alt="">
+                        </div>
+                        <div class="feedback-bottom">
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sequi at voluptatum, obcaecati assumenda nemo sit, accusantium iste eveniet enim
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                Pagination
+                <div class="swiper-pagination"></div>
+
+                Navigation Buttons 
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+           </div>
+        </section>
+        -->
+    
+        <section id="barbers_menu">
+            <h2 class="title">BARBEIROS</h2>
+            <h3 class="subtitle">ESCOLHA UM BARBEIRO E AGENDE SEU HORÁRIO</h3>
+            
+            <div id="barbers">
+                <div class="barber">
+                    <h2 class="title">DAVID</h2>
+                    <div id="slide_content">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/david.png" alt="Foto 1">
+                                </div>
+                        
+                                <div class="swiper-slide">
+                                    <img src="assets/img/kevin.png" alt="Foto 1">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="social-media-buttons">
+                        <!--Colocar link do zap do estabelecimento no href -->
+                        <a href="https://wa.me/5511992191416?text=Salve!%20Gostaria%20de%20marcar%20um%20horario%20.">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <!--Colocar link do instagram do estabelecimento no href -->
+                        <a href="https://www.instagram.com/barbeariadaquebrada17?igsh=b2ZtdnA5NG9yNXJq" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="barber">
+                    <h2 class="title">KELVIN</h2>
+                    <div id="slide_content">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/kevin.png" alt="Foto 1">
+                                </div>
+                        
+                                <div class="swiper-slide">
+                                    <img src="assets/img/david.png" alt="Foto 1">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="social-media-buttons">
+                        <!--Colocar link do zap do estabelecimento no href -->
+                        <a href="https://wa.me/5511985683634?text=Salve!%20Gostaria%20de%20marcar%20um%20horario%20." target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <!--Colocar link do instagram do estabelecimento no href -->
+                        <a href="https://www.instagram.com/zo_kelviin?igsh=eGFpazNuMHR3em0x" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Linking SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Linking custom script -->
+    <script src="assets/script/card.js"></script>
+    <script src="assets/script/script.js"></script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/script/script-slider.js"></script>
+</body>
+</html>
