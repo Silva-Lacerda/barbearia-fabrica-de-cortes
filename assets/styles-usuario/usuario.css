@@ -1,0 +1,441 @@
+/* =============================================
+   usuario.css - Estilos da tela do usuário
+   Fabrica dos Cortes
+
+   Importa variáveis do style.css principal
+   (--color-primary-1 ao 5, --font-style-1 e 2)
+============================================= */
+
+/* ===== SEÇÃO PRINCIPAL ===== */
+#agendamentos_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+    padding: 120px 60px 60px 60px;
+    gap: 30px;
+    background-color: var(--color-primary-5);
+}
+
+/* ===== CABEÇALHO DA SEÇÃO ===== */
+#section_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+}
+
+#section_header .title {
+    font-size: 3rem;
+    color: var(--color-neutral-1);
+}
+
+#section_header .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-primary-3);
+}
+
+/* ===== NOME DO USUÁRIO NA NAVBAR ===== */
+#usuario_nome {
+    font-family: var(--font-style-2);
+    font-size: 0.95rem;
+    color: var(--color-primary-1);
+    font-weight: 500;
+}
+
+/* ===== LISTA DE AGENDAMENTOS ===== */
+#ag_lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ===== CARD DE AGENDAMENTO ===== */
+.ag-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-neutral-2);
+    border: 2px solid var(--color-neutral-2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: border-color .3s ease;
+}
+
+.ag-card:hover {
+    border-color: var(--color-primary-1);
+}
+
+/* Bloco de data (dia + mês) */
+.ag-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    background-color: var(--color-primary-5);
+    border: 2px solid var(--color-primary-3);
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.ag-dia {
+    font-size: 2rem;
+    font-family: var(--font-style-1);
+    color: var(--color-primary-3);
+    line-height: 1;
+}
+
+.ag-mes {
+    font-size: 0.75rem;
+    font-family: var(--font-style-2);
+    color: var(--color-primary-1);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Informações do agendamento */
+.ag-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ag-servico {
+    font-size: 1.4rem;
+    font-family: var(--font-style-1);
+    color: var(--color-neutral-1);
+}
+
+.ag-detalhe {
+    font-size: 0.85rem;
+    font-family: var(--font-style-2);
+    color: var(--color-neutral-3);
+}
+
+.ag-detalhe i {
+    color: var(--color-primary-1);
+    margin-right: 3px;
+}
+
+/* ===== BADGES DE STATUS ===== */
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: var(--font-style-2);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-confirmado {
+    background-color: #1a3520;
+    color: #5fc474;
+}
+
+.badge-pendente {
+    background-color: #2e2000;
+    color: var(--color-primary-1);
+}
+
+.badge-cancelado {
+    background-color: #2e1010;
+    color: #e05555;
+}
+
+.badge-aguardando {
+    background-color: var(--color-primary-5);
+    color: var(--color-neutral-3);
+    border: 1px solid var(--color-neutral-2);
+}
+
+/* ===== BOTÃO CANCELAR DO CARD ===== */
+.btn-cancelar-ag {
+    border-color: #4a1515;
+    color: #e05555;
+    font-size: 0.8rem;
+    padding: 8px 14px;
+    white-space: nowrap;
+}
+
+.btn-cancelar-ag:hover {
+    background-color: #2e1010;
+    color: #e05555;
+}
+
+/* ===== ESTADO VAZIO ===== */
+#ag_vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 60px;
+    color: var(--color-neutral-3);
+    font-family: var(--font-style-2);
+}
+
+#ag_vazio i {
+    font-size: 3rem;
+    color: var(--color-primary-3);
+}
+
+#ag_vazio p {
+    font-size: 1rem;
+}
+
+/* ===== SELECT PADRÃO ===== */
+.select-default {
+    background-color: var(--color-neutral-2);
+    border: 2px solid var(--color-neutral-2);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: var(--color-neutral-1);
+    font-family: var(--font-style-2);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    transition: border-color .3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23D9B68B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+.select-default:focus {
+    border-color: var(--color-primary-1);
+}
+
+.select-default option {
+    background-color: var(--color-neutral-2);
+}
+
+/* ===== INPUT PADRÃO ===== */
+.input-default {
+    background-color: var(--color-neutral-2);
+    border: 2px solid var(--color-neutral-2);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: var(--color-neutral-1);
+    font-family: var(--font-style-2);
+    font-size: 0.9rem;
+    outline: none;
+    width: 100%;
+    transition: border-color .3s ease;
+}
+
+.input-default:focus {
+    border-color: var(--color-primary-1);
+}
+
+/* ===== MODAIS ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+.modal {
+    background-color: var(--color-neutral-2);
+    border-radius: 15px;
+    border: 2px solid var(--color-primary-1);
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.modal-sm {
+    max-width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 2px solid var(--color-primary-5);
+}
+
+.modal-title {
+    font-size: 1.6rem;
+    color: var(--color-primary-1);
+    font-family: var(--font-style-1);
+}
+
+.modal-fechar {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px solid var(--color-neutral-3);
+    background: transparent;
+    color: var(--color-neutral-3);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.modal-fechar:hover {
+    border-color: var(--color-primary-1);
+    color: var(--color-primary-1);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+.modal-texto {
+    font-family: var(--font-style-2);
+    font-size: 0.95rem;
+    color: var(--color-neutral-1);
+    line-height: 1.6;
+}
+
+.modal-texto strong {
+    color: var(--color-primary-1);
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 24px;
+    border-top: 2px solid var(--color-primary-5);
+}
+
+/* ===== CAMPOS DO FORMULÁRIO ===== */
+.campo-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-group label {
+    font-size: 0.85rem;
+    color: var(--color-primary-1);
+    font-family: var(--font-style-2);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.campo-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* ===== VARIAÇÕES DE BOTÃO ===== */
+.btn-salvar {
+    background-color: var(--color-primary-3);
+    border-color: var(--color-primary-3);
+    color: var(--color-neutral-1);
+}
+
+.btn-salvar:hover {
+    background-color: var(--color-primary-2);
+    border-color: var(--color-primary-2);
+    color: var(--color-neutral-1);
+}
+
+.btn-cancelar-modal {
+    background-color: transparent;
+    border-color: var(--color-neutral-3);
+    color: var(--color-neutral-3);
+}
+
+.btn-cancelar-modal:hover {
+    background-color: var(--color-neutral-3);
+    color: var(--color-neutral-1);
+}
+
+.btn-deletar {
+    background-color: #2e1010;
+    border-color: #4a1515;
+    color: #e05555;
+}
+
+.btn-deletar:hover {
+    background-color: #3d1414;
+    border-color: #5a1a1a;
+}
+
+/* ===== TOAST ===== */
+#toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: var(--font-style-2);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+}
+
+#toast.toast-sucesso {
+    display: flex;
+    background-color: #1a3520;
+    color: #5fc474;
+    border-color: #254d30;
+}
+
+#toast.toast-erro {
+    display: flex;
+    background-color: #2e1010;
+    color: #e05555;
+    border-color: #4a1515;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 768px) {
+    #agendamentos_section {
+        padding: 120px 20px 40px 20px;
+    }
+
+    #section_header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    #section_header .title {
+        font-size: 2.2rem;
+    }
+
+    .ag-card {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .btn-cancelar-ag {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .campo-row {
+        grid-template-columns: 1fr;
+    }
+}

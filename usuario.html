@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Fabrica dos Cortes</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles-usuario/usuario.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header>
+        <nav id="navbar">
+            <img src="assets/img/logo_fabrica.png" alt="Logo Fabrica De Cortes" id="logo">
+
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="#agendamentos_section">MEUS AGENDAMENTOS</a>
+                </li>
+            </ul>
+
+            <div id="buttons">
+                <!-- 
+                    PHP preenche o nome do usuário:
+                    <span id="usuario_nome"><?= $usuario['nome'] ?></span>
+                -->
+                <span id="usuario_nome">Olá, Lucas</span>
+                <a href="logout.php">
+                    <button class="btn-default">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        SAIR
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main id="content">
+        <section id="agendamentos_section">
+
+            <!-- TÍTULO + BOTÃO -->
+            <div id="section_header">
+                <div>
+                    <h2 class="title">MEUS AGENDAMENTOS</h2>
+                    <h3 class="subtitle">ACOMPANHE E GERENCIE SEUS HORÁRIOS</h3>
+                </div>
+                <button class="btn-default" id="btn_novo">
+                    <i class="fa-solid fa-plus"></i>
+                    AGENDAR HORÁRIO
+                </button>
+            </div>
+
+            <!-- LISTA DE AGENDAMENTOS -->
+            <!-- 
+                PHP renderiza os cards aqui dentro com um foreach:
+
+                <?php foreach ($agendamentos as $ag): ?>
+                <div class="ag-card">
+                    <div class="ag-data">
+                        <span class="ag-dia"><?= date('d', strtotime($ag['data'])) ?></span>
+                        <span class="ag-mes"><?= strtoupper(date('M', strtotime($ag['data']))) ?></span>
+                    </div>
+                    <div class="ag-info">
+                        <h3 class="ag-servico"><?= $ag['servico'] ?></h3>
+                        <p class="ag-detalhe">
+                            <i class="fa-solid fa-scissors"></i> <?= $ag['barbeiro'] ?>
+                            &nbsp;·&nbsp;
+                            <i class="fa-regular fa-clock"></i> <?= $ag['horario'] ?>
+                        </p>
+                    </div>
+                    <span class="badge badge-<?= $ag['status'] ?>"><?= ucfirst($ag['status']) ?></span>
+                    <button 
+                        class="btn-default btn-cancelar-ag"
+                        data-id="<?= $ag['id'] ?>"
+                        data-servico="<?= $ag['servico'] ?>">
+                        CANCELAR
+                    </button>
+                </div>
+                <?php endforeach; ?>
+            -->
+
+            <div id="ag_lista">
+
+                <!-- EXEMPLO ESTÁTICO (remover quando PHP estiver pronto) -->
+                <div class="ag-card">
+                    <div class="ag-data">
+                        <span class="ag-dia">18</span>
+                        <span class="ag-mes">MAI</span>
+                    </div>
+                    <div class="ag-info">
+                        <h3 class="ag-servico">Corte + Barba</h3>
+                        <p class="ag-detalhe">
+                            <i class="fa-solid fa-scissors"></i> David
+                            &nbsp;·&nbsp;
+                            <i class="fa-regular fa-clock"></i> 14:00
+                        </p>
+                    </div>
+                    <span class="badge badge-confirmado">Confirmado</span>
+                    <button class="btn-default btn-cancelar-ag" data-id="1" data-servico="Corte + Barba">
+                        CANCELAR
+                    </button>
+                </div>
+
+                <div class="ag-card">
+                    <div class="ag-data">
+                        <span class="ag-dia">25</span>
+                        <span class="ag-mes">MAI</span>
+                    </div>
+                    <div class="ag-info">
+                        <h3 class="ag-servico">Barba e Bigode</h3>
+                        <p class="ag-detalhe">
+                            <i class="fa-solid fa-scissors"></i> Kelvin
+                            &nbsp;·&nbsp;
+                            <i class="fa-regular fa-clock"></i> 10:30
+                        </p>
+                    </div>
+                    <span class="badge badge-pendente">Pendente</span>
+                    <button class="btn-default btn-cancelar-ag" data-id="2" data-servico="Barba e Bigode">
+                        CANCELAR
+                    </button>
+                </div>
+                <!-- FIM EXEMPLO ESTÁTICO -->
+
+            </div>
+
+            <!-- Mensagem quando não há agendamentos -->
+            <!-- PHP: só exibe se $agendamentos estiver vazio -->
+            <div id="ag_vazio" style="display: none;">
+                <i class="fa-regular fa-calendar-xmark"></i>
+                <p>Você não tem agendamentos.</p>
+                <button class="btn-default" id="btn_novo_vazio">
+                    <i class="fa-solid fa-plus"></i>
+                    AGENDAR AGORA
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <!--  MODAL: NOVO AGENDAMENTO -->
+    <div id="modal_overlay" class="modal-overlay" style="display: none;">
+        <div class="modal">
+
+            <div class="modal-header">
+                <h2 class="modal-title">AGENDAR HORÁRIO</h2>
+                <button class="modal-fechar" id="modal_fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="campo-row">
+                    <div class="campo-group">
+                        <label for="campo_servico">SERVIÇO</label>
+                        <select id="campo_servico" name="servico" class="select-default">
+                            <option value="">Selecione...</option>
+                            <option value="Corte + Barba">Corte + Barba</option>
+                            <option value="Corte Gilete">Corte Gilete</option>
+                            <option value="Barba e Bigode">Barba e Bigode</option>
+                            <option value="Penteado">Penteado</option>
+                            <option value="Químico">Químico</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-group">
+                        <label for="campo_barbeiro">BARBEIRO</label>
+                        <select id="campo_barbeiro" name="barbeiro" class="select-default">
+                            <option value="">Selecione...</option>
+                            <option value="David">David</option>
+                            <option value="Kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo-row">
+                    <div class="campo-group">
+                        <label for="campo_data">DATA</label>
+                        <input type="date" id="campo_data" name="data" class="input-default">
+                    </div>
+
+                    <div class="campo-group">
+                        <label for="campo_horario">HORÁRIO</label>
+                        <input type="time" id="campo_horario" name="horario" class="input-default">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-default btn-cancelar-modal" id="modal_cancelar">CANCELAR</button>
+                <!-- PHP processa o submit deste form -->
+                <button class="btn-default btn-salvar" id="modal_salvar">
+                    <i class="fa-solid fa-check"></i>
+                    CONFIRMAR
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  MODAL: CONFIRMAR CANCELAMENTO  -->
+    <div id="modal_cancel_overlay" class="modal-overlay" style="display: none;">
+        <div class="modal modal-sm">
+
+            <div class="modal-header">
+                <h2 class="modal-title">CANCELAR AGENDAMENTO</h2>
+                <button class="modal-fechar" id="modal_cancel_fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-texto">
+                    Tem certeza que deseja cancelar o agendamento de <strong id="cancel_servico"></strong>?
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-default btn-cancelar-modal" id="modal_cancel_cancelar">VOLTAR</button>
+                <!-- PHP processa via action do form ou link -->
+                <a href="#" id="modal_cancel_confirmar">
+                    <button class="btn-default btn-deletar">
+                        <i class="fa-solid fa-xmark"></i>
+                        CANCELAR AGENDAMENTO
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  TOAST DE FEEDBACK  -->
+    <div id="toast"></div>
+
+    <!-- Script -->
+    <script src="assets/script/script-usuario.js"></script>
+</body>
+</html>
